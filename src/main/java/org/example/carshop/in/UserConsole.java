@@ -459,17 +459,6 @@ public class UserConsole {
     }
 
     /**
-     * Prints the elements of an ArrayList to the console.
-     *
-     * @param collection The Collection containing elements to print.
-     */
-    public void printCollection(Collection<?> collection) {
-        for (Object object : collection) {
-            System.out.println(object);
-        }
-    }
-
-    /**
      * Runs the commands loop for managing requests.
      * Provides options for viewing, filtering, creating, and canceling request for car order and maintenance.
      */
@@ -653,13 +642,26 @@ public class UserConsole {
                         case 4 -> requestStatus = RequestStatus.COMPLETED;
                         default -> System.out.println("Введена несуществующая команда!");
                     }
-                    requestService.updateRequest(new Request(user, carId, requestDateTimes[0], requestDateTimes[1], requestType, requestStatus));
+                    requestService.addRequest(new Request(user, carId, requestDateTimes[0], requestDateTimes[1], requestType, requestStatus));
                 }
                 case 7 -> {
+                    isAuthorized = false;
+                    currentUser = null;
                     return;
                 }
                 default -> System.out.println("Неверная команда");
             }
+        }
+    }
+
+    /**
+     * Prints the elements of an ArrayList to the console.
+     *
+     * @param collection The Collection containing elements to print.
+     */
+    public void printCollection(Collection<?> collection) {
+        for (Object object : collection) {
+            System.out.println(object);
         }
     }
 }

@@ -1,6 +1,7 @@
 package org.example.carshop.service;
 
 import lombok.AllArgsConstructor;
+import org.example.carshop.model.Car;
 import org.example.carshop.model.enums.RequestStatus;
 import org.example.carshop.model.enums.RequestType;
 import org.example.carshop.model.Request;

@@ -72,14 +72,6 @@ public class Request {
         this.requestStatus = RequestStatus.NEW;
     }
 
-    /**
-     * Checks if the user who made the request is null.
-     *
-     * @return true if the user is null, false otherwise
-     */
-    public boolean isUserNull() {
-        return this.user == null;
-    }
 
     /**
      * Changes the status of the request.
