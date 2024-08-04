@@ -16,7 +16,7 @@
         <assertj.version>3.24.2</assertj.version>
         <mokito.version>4.8.1</mokito.version>
         <jacoco.version>0.8.7</jacoco.version>
-        <lombock.version>1.18.30</lombock.version>
+        <lombok.version>1.18.30</lombok.version>
     </properties>
     <dependencies>
         <dependency>
@@ -46,7 +46,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>${lombock.version}</version>
+            <version>${lombok.version}</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
